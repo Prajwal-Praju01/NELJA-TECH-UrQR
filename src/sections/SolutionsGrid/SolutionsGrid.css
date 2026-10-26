@@ -1,0 +1,134 @@
+.solutions-grid__header {
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: var(--sp-12);
+}
+
+.solutions-grid__title {
+  font-size: clamp(var(--text-2xl), 3.5vw, var(--text-4xl));
+  margin-bottom: var(--sp-4);
+}
+
+.solutions-grid__sub {
+  font-size: var(--text-lg);
+  color: var(--color-text-2);
+}
+
+/* Grid */
+.solutions-grid__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-4);
+}
+
+@media (min-width: 640px) {
+  .solutions-grid__cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .solutions-grid__cards { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Card */
+.sol-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.sol-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-emerald-light);
+}
+
+/* Visual header */
+.sol-card__visual {
+  position: relative;
+  height: 110px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--sp-4);
+}
+
+.sol-card__visual-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: transform var(--transition-slow), opacity var(--transition-base);
+}
+
+.sol-card:hover .sol-card__visual-img {
+  transform: scale(1.05);
+  opacity: 0.6;
+}
+
+.sol-card__visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 100%);
+}
+
+.sol-card__icon {
+  position: relative;
+  z-index: 1;
+  font-size: 2.25rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+}
+
+/* Card body */
+.sol-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  flex: 1;
+}
+
+.sol-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+
+.sol-card__name {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.sol-card__headline {
+  font-size: var(--text-sm);
+  color: var(--color-text-2);
+  line-height: var(--leading-relaxed);
+  flex: 1;
+}
+
+.sol-card__link {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-emerald);
+  margin-top: auto;
+  transition: gap var(--transition-fast);
+}
+
+.sol-card:hover .sol-card__link {
+  gap: var(--sp-2);
+}

@@ -1,0 +1,122 @@
+.why-urqr { background: var(--color-bg-alt); }
+
+.why-urqr__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-12);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .why-urqr__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-16);
+    align-items: center;
+  }
+}
+
+.why-urqr__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  position: sticky;
+  top: calc(var(--nav-height) + var(--sp-8));
+}
+
+.why-urqr__title {
+  font-size: clamp(var(--text-2xl), 3.5vw, var(--text-4xl));
+  line-height: var(--leading-snug);
+}
+
+.why-urqr__sub {
+  color: var(--color-text-2);
+  line-height: var(--leading-relaxed);
+}
+
+/* Image card */
+.why-urqr__image-card {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-top: var(--sp-4);
+}
+
+.why-urqr__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.why-urqr__image-card:hover .why-urqr__image {
+  transform: scale(1.03);
+}
+
+.why-urqr__image-caption {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-2);
+}
+
+.why-urqr__image-caption-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-emerald);
+  flex-shrink: 0;
+}
+
+/* Why cards */
+.why-urqr__right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.why-card {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: flex-start;
+  padding: var(--sp-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  transition: box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+}
+
+.why-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-emerald-light);
+}
+
+.why-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  background: var(--color-emerald-light);
+  color: var(--color-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.why-card__title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--sp-2);
+}
+
+.why-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-2);
+  line-height: var(--leading-relaxed);
+}

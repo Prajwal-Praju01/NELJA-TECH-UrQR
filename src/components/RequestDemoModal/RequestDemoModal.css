@@ -1,0 +1,206 @@
+.demo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: var(--sp-4);
+}
+
+.demo-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 27, 24, 0.6);
+  cursor: default;
+}
+
+.demo-modal__dialog {
+  position: relative;
+  width: min(100%, 600px);
+  max-height: min(90vh, 760px);
+  overflow-y: auto;
+  padding: clamp(var(--sp-5), 4vw, var(--sp-8));
+  background: var(--color-surface);
+  border: 1px solid rgba(28, 27, 24, 0.16);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+.demo-modal__close {
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  color: var(--color-text-3);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.demo-modal__close:hover {
+  color: var(--color-text);
+  transform: rotate(8deg);
+}
+
+.demo-modal__title {
+  margin-bottom: var(--sp-6);
+  padding-right: var(--sp-8);
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl));
+}
+
+.demo-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.demo-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  color: var(--color-text-2);
+  font-size: var(--text-base);
+}
+
+.demo-modal__field span > b {
+  color: var(--color-error);
+  font-weight: 500;
+}
+
+.demo-modal__field input,
+.demo-modal__field select,
+.demo-modal__phone {
+  min-height: 48px;
+  width: 100%;
+  border: 1px solid #d5dbe1;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--text-base);
+}
+
+.demo-modal__field input,
+.demo-modal__field select {
+  padding: var(--sp-2) var(--sp-3);
+}
+
+.demo-modal__field input:focus,
+.demo-modal__field select:focus {
+  border-color: var(--color-emerald);
+  outline: 2px solid rgba(26, 107, 74, 0.2);
+}
+
+.demo-modal__field input[aria-invalid="true"],
+.demo-modal__field select[aria-invalid="true"] {
+  border-color: var(--color-error);
+}
+
+.demo-modal__field select:disabled {
+  color: var(--color-text-3);
+  background: var(--color-bg-alt);
+}
+
+.demo-modal__field small {
+  color: var(--color-error);
+  font-size: var(--text-xs);
+}
+
+.demo-modal__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+
+.demo-modal__phone {
+  display: flex;
+  overflow: hidden;
+}
+
+.demo-modal__phone > span {
+  display: grid;
+  place-items: center;
+  min-width: 82px;
+  padding-inline: var(--sp-3);
+  border-right: 1px solid #d5dbe1;
+  color: var(--color-text-2);
+}
+
+.demo-modal__phone input {
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.demo-modal__submit {
+  align-self: center;
+  min-width: 124px;
+  min-height: 46px;
+  padding: var(--sp-2) var(--sp-6);
+  border-radius: var(--radius-full);
+  background: #f58b2a;
+  color: #1c1b18;
+  font-size: var(--text-lg);
+  font-weight: 800;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.demo-modal__submit:hover {
+  background: #e87916;
+  transform: translateY(-2px);
+}
+
+.demo-modal__success {
+  display: grid;
+  justify-items: center;
+  gap: var(--sp-5);
+  padding-block: var(--sp-12);
+  text-align: center;
+}
+
+.demo-modal__success > svg {
+  color: var(--color-emerald);
+}
+
+.demo-modal__success p {
+  max-width: 460px;
+}
+
+@media (max-width: 640px) {
+  .demo-modal {
+    padding: var(--sp-3);
+  }
+
+  .demo-modal__dialog {
+    max-height: 94vh;
+    padding: var(--sp-6);
+    border-radius: var(--radius-lg);
+  }
+
+  .demo-modal__close {
+    top: var(--sp-4);
+    right: var(--sp-4);
+  }
+
+  .demo-modal__title {
+    margin-bottom: var(--sp-5);
+  }
+
+  .demo-modal__row {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+
+  .demo-modal__field {
+    font-size: var(--text-base);
+  }
+
+  .demo-modal__field input,
+  .demo-modal__field select,
+  .demo-modal__phone {
+    min-height: 46px;
+    font-size: var(--text-base);
+  }
+
+  .demo-modal__phone > span {
+    min-width: 72px;
+  }
+}
