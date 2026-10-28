@@ -23,16 +23,16 @@ export default function Hero() {
             <div className="hero__content">
               <div className="hero__badge">
                 <Star size={12} fill="currentColor" />
-                Restaurant Technology for India
+                Digital menus and ordering for restaurants
               </div>
               <h1 className="hero__headline">
-                Turn Every Table Into a{" "}
-                <em className="hero__headline-em">Smarter</em>{" "}
-                Ordering Experience.
+                Put your menu and table ordering on{" "}
+                <em className="hero__headline-em">every guest's phone.</em>
               </h1>
               <p className="hero__sub">
-                Give your guests a simple way to explore your menu and order from their
-                phones, while your team keeps service moving.
+                Guests scan a QR code, browse your menu, and place an order without
+                waiting for a menu or downloading an app. Your team sees the order
+                and keeps service moving.
               </p>
 
               <div className="hero__cta-group">
@@ -65,7 +65,7 @@ export default function Hero() {
             {/* Right: Visual */}
             <div className="hero__visual" aria-hidden="true">
               {/* Table card */}
-              <div className="hero__table-card">
+              <div className="hero__table-card hero__float-card">
                 <div className="hero__table-card-top">
                   <span className="hero__table-label">Table T-04</span>
                   <span className="hero__restaurant-label">Aromas of India</span>
@@ -96,7 +96,7 @@ export default function Hero() {
               </div>
 
               {/* Phone mockup */}
-              <div className="hero__phone">
+              <div className="hero__phone hero__phone--animated">
                 <div className="hero__phone-notch" />
                 <div className="hero__phone-screen">
                   <div className="hero__phone-header">
@@ -108,13 +108,12 @@ export default function Hero() {
                   </div>
                   {/* Mini menu items */}
                   {[
-                    { name: "Paneer Tikka", price: "₹220", veg: true, pop: true, emoji: "🫙" },
-                    { name: "Masala Dosa", price: "₹130", veg: true, pop: true, emoji: "🫓" },
-                    { name: "Chicken Biryani", price: "₹310", veg: false, pop: true, emoji: "🍚" },
-                    { name: "Filter Coffee", price: "₹70", veg: true, pop: false, emoji: "☕" },
+                    { name: "Paneer Tikka", price: "₹220", veg: true, pop: true },
+                    { name: "Masala Dosa", price: "₹130", veg: true, pop: true },
+                    { name: "Chicken Biryani", price: "₹310", veg: false, pop: true },
+                    { name: "Filter Coffee", price: "₹70", veg: true, pop: false },
                   ].map((item, i) => (
                     <div key={i} className="hero__mini-item">
-                      <span className="hero__mini-emoji">{item.emoji}</span>
                       <div className="hero__mini-info">
                         <span className="hero__mini-name">{item.name}</span>
                         <span className="hero__mini-price">{item.price}</span>
@@ -132,7 +131,7 @@ export default function Hero() {
               </div>
 
               {/* Floating status card */}
-              <div className="hero__status-card">
+              <div className="hero__status-card hero__float-card hero__float-card--delayed">
                 <div className="hero__status-dot" />
                 <div>
                   <p className="hero__status-label">Order #1042</p>
@@ -141,7 +140,7 @@ export default function Hero() {
               </div>
 
               {/* Floating dish card */}
-              <div className="hero__dish-card">
+              <div className="hero__dish-card hero__float-card hero__float-card--slow">
                 <span className="hero__dish-emoji">🍛</span>
                 <div>
                   <p className="hero__dish-name">Veg Biryani</p>
@@ -158,10 +157,10 @@ export default function Hero() {
         <div className="container">
           <div className="hero__stats-inner">
             {[
-              { value: "500+", label: "Restaurants onboarded" },
-              { value: "2 min", label: "Average setup time" },
-              { value: "0", label: "App downloads needed" },
-              { value: "100%", label: "Mobile-first experience" },
+              { value: "1", label: "QR code at each table" },
+              { value: "0", label: "Guest app downloads" },
+              { value: "Live", label: "Menu and availability updates" },
+              { value: "Any phone", label: "Works in a mobile browser" },
             ].map((stat, i) => (
               <div key={i} className="hero__stat">
                 <span className="hero__stat-value">{stat.value}</span>

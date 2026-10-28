@@ -249,12 +249,6 @@ export const FAQ_ITEMS: FAQItem[] = [
     category: "product",
   },
   {
-    id: "faq7",
-    question: "How is UrQR priced?",
-    answer: "UrQR offers plan-based monthly or annual subscriptions. The pricing shown on our website is illustrative. Final commercial terms and pricing for your restaurant are confirmed during the onboarding process. Please book a demo or contact us for accurate quotes.",
-    category: "pricing",
-  },
-  {
     id: "faq8",
     question: "How long does it take to set up?",
     answer: "Getting your digital menu live is designed to be fast. Once you have your restaurant details and menu ready, the basic setup can be completed in a single session. Our team will guide you through onboarding.",

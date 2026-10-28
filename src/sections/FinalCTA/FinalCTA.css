@@ -186,7 +186,7 @@
   color: rgba(255,255,255,0.75);
 }
 
-.final-cta__order-item span:nth-child(2) { flex: 1; }
+.final-cta__order-item span:first-child { flex: 1; }
 .final-cta__order-item span:last-child { font-weight: 600; color: #fff; }
 
 .final-cta__order-total {

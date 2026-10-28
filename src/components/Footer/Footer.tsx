@@ -20,7 +20,6 @@ const SOLUTION_LINKS = [
 
 const COMPANY_LINKS = [
   { label: "How It Works", href: "/how-it-works" },
-  { label: "Pricing", href: "/pricing" },
   { label: "Book a Demo", href: "/contact" },
   { label: "Contact Us", href: "/contact" },
 ];
@@ -42,16 +41,21 @@ export default function Footer() {
             </span>
           </Link>
           <p className="footer__brand-desc">
-            A smarter way to dine. QR-based digital menus and a connected ordering experience for modern Indian restaurants.
+            QR menus and table ordering for cafés, restaurants, bakeries, and food businesses.
           </p>
           <div className="footer__contact">
-            <span className="footer__contact-item">
+            <a
+              href="https://maps.app.goo.gl/ovDBfpwPSeNXfcpk9"
+              className="footer__contact-item footer__contact-item--link"
+              target="_blank"
+              rel="noreferrer"
+            >
               <MapPin size={14} />
-              Bengaluru, Karnataka, India
-            </span>
-            <a href="mailto:hello@urqr.in" className="footer__contact-item footer__contact-item--link">
+              View our location on Google Maps
+            </a>
+            <a href="mailto:technelja@gmail.com" className="footer__contact-item footer__contact-item--link">
               <Mail size={14} />
-              hello@urqr.in
+              technelja@gmail.com
             </a>
           </div>
         </div>

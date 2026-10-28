@@ -59,10 +59,10 @@ export default function ProblemSolution() {
             <div className="problem-solution__header">
               <div className="section-label">Problem → Solution</div>
               <h2 id="problem-heading" className="problem-solution__title">
-                Real restaurant challenges, addressed thoughtfully
+                Less waiting for guests. Less chasing for your team.
               </h2>
               <p className="problem-solution__sub">
-                UrQR is designed around the actual friction points restaurant teams and guests encounter every day.
+                A QR menu is useful when it removes work. Here is where UrQR fits into a normal service.
               </p>
             </div>
 

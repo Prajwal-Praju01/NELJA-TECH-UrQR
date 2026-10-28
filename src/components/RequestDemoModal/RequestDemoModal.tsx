@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { CheckCircle2, X } from "lucide-react";
 import "./RequestDemoModal.css";
 
@@ -48,9 +48,10 @@ export default function RequestDemoModal() {
   const [form, setForm] = useState(INITIAL_FORM);
   const [errors, setErrors] = useState<DemoErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const dialogRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setIsOpen(true), 3500);
+    const timer = window.setTimeout(() => setIsOpen(true), 4000);
     return () => window.clearTimeout(timer);
   }, []);
 
@@ -64,11 +65,16 @@ export default function RequestDemoModal() {
     document.addEventListener("keydown", onKeyDown);
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    dialogRef.current?.focus();
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = previousOverflow;
     };
   }, [isOpen]);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   function updateField(name: keyof DemoForm, value: string) {
     setForm((previous) => ({
@@ -94,9 +100,9 @@ export default function RequestDemoModal() {
 
   return (
     <div className="demo-modal" role="presentation">
-      <button className="demo-modal__backdrop" aria-label="Close demo request" onClick={() => setIsOpen(false)} />
-      <section className="demo-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
-        <button className="demo-modal__close" aria-label="Close demo request" onClick={() => setIsOpen(false)}>
+      <button className="demo-modal__backdrop" aria-label="Close demo request" onClick={closeModal} />
+      <section ref={dialogRef} className="demo-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title" tabIndex={-1}>
+        <button className="demo-modal__close" aria-label="Close demo request" onClick={closeModal}>
           <X size={32} strokeWidth={1.8} />
         </button>
 
@@ -105,7 +111,7 @@ export default function RequestDemoModal() {
             <CheckCircle2 size={54} />
             <h2 id="demo-modal-title">Thanks for your interest!</h2>
             <p>Your demo request has been recorded for this frontend demonstration. Our team will be in touch shortly.</p>
-            <button className="demo-modal__submit" onClick={() => setIsOpen(false)}>Continue to website</button>
+            <button className="demo-modal__submit" onClick={closeModal}>Continue to website</button>
           </div>
         ) : (
           <>

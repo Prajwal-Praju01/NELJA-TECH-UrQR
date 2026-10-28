@@ -34,7 +34,7 @@ export default function SolutionsGrid() {
             const visual = SOLUTION_VISUALS[sol.id];
             return (
               <Link
-                to={`/solutions#${sol.id}`}
+                to={`/solutions/${sol.id}`}
                 key={sol.id}
                 className="sol-card"
                 aria-label={`${sol.name} solution`}

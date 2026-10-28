@@ -13,14 +13,17 @@
     gap: var(--sp-16);
     align-items: center;
   }
+
+  .why-urqr__left {
+    position: sticky;
+    top: calc(var(--nav-height) + var(--sp-8));
+  }
 }
 
 .why-urqr__left {
   display: flex;
   flex-direction: column;
   gap: var(--sp-5);
-  position: sticky;
-  top: calc(var(--nav-height) + var(--sp-8));
 }
 
 .why-urqr__title {

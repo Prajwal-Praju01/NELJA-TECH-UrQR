@@ -397,8 +397,9 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="contact-info__item-label">Email</p>
-                        <p className="contact-info__item-value">hello@urqr.in</p>
-                        <p className="contact-info__item-note">(illustrative — not yet live)</p>
+                        <a className="contact-info__item-value" href="mailto:technelja@gmail.com">
+                          technelja@gmail.com
+                        </a>
                       </div>
                     </div>
                     <div className="contact-info__item">
@@ -407,7 +408,14 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="contact-info__item-label">Location</p>
-                        <p className="contact-info__item-value">Bengaluru, Karnataka, India</p>
+                        <a
+                          className="contact-info__item-value"
+                          href="https://maps.app.goo.gl/ovDBfpwPSeNXfcpk9"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          View location on Google Maps
+                        </a>
                         <p className="contact-info__item-note">Serving restaurants across India</p>
                       </div>
                     </div>

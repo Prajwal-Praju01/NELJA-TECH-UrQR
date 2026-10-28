@@ -7,7 +7,6 @@ const NAV_LINKS = [
   { label: "Product", href: "/product" },
   { label: "Solutions", href: "/solutions" },
   { label: "How It Works", href: "/how-it-works" },
-  { label: "Pricing", href: "/pricing" },
 ];
 
 export default function Navbar() {
@@ -64,10 +63,7 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="navbar__actions">
-            <Link to="/contact" className="btn btn--secondary btn--sm">
-              Contact
-            </Link>
-            <Link to="/contact" className="btn btn--primary btn--sm">
+            <Link to="/contact" className="btn btn--primary btn--sm" id="nav-book-demo">
               Book a Demo
             </Link>
           </div>

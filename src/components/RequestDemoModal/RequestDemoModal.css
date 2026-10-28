@@ -26,6 +26,12 @@
   border: 1px solid rgba(28, 27, 24, 0.16);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
+  animation: demoModalIn 240ms ease-out both;
+}
+
+@keyframes demoModalIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .demo-modal__close {

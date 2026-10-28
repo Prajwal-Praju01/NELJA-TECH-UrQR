@@ -1,0 +1,112 @@
+.offerings {
+  background: var(--color-surface);
+}
+
+.offerings__header {
+  max-width: 720px;
+  margin-bottom: var(--sp-10);
+}
+
+.offerings__title {
+  margin-block: var(--sp-3) var(--sp-4);
+  font-size: clamp(var(--text-2xl), 3.5vw, var(--text-4xl));
+}
+
+.offerings__sub {
+  font-size: var(--text-lg);
+}
+
+.offerings__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+}
+
+@media (min-width: 640px) {
+  .offerings__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .offerings__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.offering-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 260px;
+  padding: var(--sp-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.offering-card:hover {
+  border-color: var(--color-emerald-mid);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.offering-card__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--sp-5);
+  border-radius: var(--radius-lg);
+  background: var(--color-emerald-light);
+  color: var(--color-emerald);
+}
+
+.offering-card h3 {
+  margin-bottom: var(--sp-3);
+  font-size: var(--text-lg);
+}
+
+.offering-card p {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+}
+
+.offering-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: auto;
+  padding-top: var(--sp-5);
+  color: var(--color-emerald);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.offering-card__link:hover {
+  text-decoration: underline;
+}
+
+.offerings__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-5);
+  margin-top: var(--sp-8);
+  padding: var(--sp-5) var(--sp-6);
+  border-radius: var(--radius-xl);
+  background: var(--color-emerald-light);
+}
+
+.offerings__footer p {
+  color: var(--color-emerald-dark);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .offerings__footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

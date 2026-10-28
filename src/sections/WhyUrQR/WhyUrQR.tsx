@@ -30,8 +30,8 @@ const PRINCIPLES = [
   },
   {
     icon: Layers,
-    title: "Designed to grow with you",
-    desc: "Start with a digital menu. As UrQR evolves, you get more capabilities without switching platforms.",
+    title: "Start with what you need",
+    desc: "Use the digital menu first, then add ordering and operational tools as your restaurant is ready.",
   },
 ];
 
@@ -43,10 +43,10 @@ export default function WhyUrQR() {
           <div className="why-urqr__left">
             <div className="section-label">Why UrQR</div>
             <h2 id="why-heading" className="why-urqr__title serif">
-              Designed around the dining experience, not just the technology.
+              A practical digital menu for the way restaurants actually work.
             </h2>
             <p className="why-urqr__sub">
-              UrQR is built on product principles that put the guest experience and your team's operational clarity at the centre — not a checklist of software features.
+              Guests get a quick way to see the menu and order. Your team gets fewer interruptions and one place to manage what is available.
             </p>
             <Link to="/contact" className="btn btn--primary btn--lg" id="why-book-demo">
               Book a Demo

@@ -13,20 +13,20 @@ export default function DemoSection() {
 
           {/* Right: Explanation */}
           <div className="demo-section__content">
-            <div className="section-label">Interactive Demo</div>
+            <div className="section-label">Try the guest menu</div>
             <h2 id="demo-heading" className="demo-section__title">
-              See the guest experience for yourself
+              See what your guests see after they scan
             </h2>
             <p className="demo-section__sub">
-              This is a fully interactive frontend demonstration of the UrQR guest menu experience. Browse the menu, add items to your cart, and see the order journey — all running locally, with no real order being placed.
+              Open the sample menu below and try the same basic journey a guest follows: browse dishes, add items, review the cart, and send a test order.
             </p>
 
             <div className="demo-section__steps">
               {[
-                { n: "1", text: "Open the demo menu using the button on the phone" },
-                { n: "2", text: "Browse categories and add items to your cart" },
-                { n: "3", text: "Review your order and total in the cart view" },
-                { n: "4", text: "Simulate placing an order and tracking its status" },
+              { n: "1", text: "Open the menu on the phone" },
+              { n: "2", text: "Browse dishes and add items" },
+              { n: "3", text: "Review the cart and total" },
+              { n: "4", text: "Send a test order" },
               ].map((s) => (
                 <div key={s.n} className="demo-step">
                   <div className="demo-step__num">{s.n}</div>
