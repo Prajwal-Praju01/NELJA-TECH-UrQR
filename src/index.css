@@ -145,6 +145,25 @@ body {
   overflow-x: clip;
 }
 
+main,
+#root,
+.container,
+.section {
+  min-width: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a {
+  overflow-wrap: anywhere;
+}
+
 /* ── Typography ── */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
@@ -196,23 +215,11 @@ ul, ol { list-style: none; }
   width: 100%;
   max-width: var(--max-w-xl);
   margin-inline: auto;
-  padding-inline: var(--sp-6);
-}
-
-@media (min-width: 768px) {
-  .container { padding-inline: var(--sp-8); }
-}
-
-@media (min-width: 1200px) {
-  .container { padding-inline: var(--sp-12); }
+  padding-inline: clamp(var(--sp-4), 4vw, var(--sp-12));
 }
 
 .section {
-  padding-block: var(--sp-20);
-}
-
-@media (min-width: 768px) {
-  .section { padding-block: var(--sp-24); }
+  padding-block: clamp(var(--sp-16), 8vw, var(--sp-24));
 }
 
 .section--lg {
